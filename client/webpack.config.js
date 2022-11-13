@@ -19,7 +19,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "Contact Cards",
+        title: "Text Editor",
       }),
 
       // Injects our custom service worker
@@ -32,9 +32,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: "Contact Cards",
-        short_name: "Contact",
-        description: "Never forget your contacts!",
+        name: "Text Editor",
+        short_name: "Editor",
+        description: "cooooool text editor",
         background_color: "#225ca3",
         theme_color: "#225ca3",
         start_url: "./",
@@ -43,7 +43,7 @@ module.exports = () => {
           {
             src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join("assets", "icons"),
+            destination: path.join("src", "imags", "logo.png"),
           },
         ],
       }),
